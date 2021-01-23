@@ -1,0 +1,116 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.25rem;
+}
+
+body {
+  background: linear-gradient(
+    to right,
+    hsl(200, 100%, 50%),
+    hsl(175, 100%, 50%)
+  );
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+}
+
+.clock {
+  border: 2px solid black;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+
+.clock::after {
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 11;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clock .hand,
+.clock .dot {
+  --rotate: 0deg;
+  background-color: black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translate(-50%) rotate(var(--rotate));
+}
+
+.clock .hour {
+  width: 10px;
+  height: 30%;
+}
+
+.clock .minute {
+  --rotate: 0deg;
+  width: 5px;
+  height: 35%;
+}
+
+.clock .second {
+  --rotate: 0deg;
+  background-color: rgb(230, 44, 44);
+  width: 2px;
+  height: 43%;
+}
+
+.clock .number {
+  --rotate: 0deg;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotate));
+}
+.clock .number1 {
+  --rotate: 30deg;
+}
+.clock .number2 {
+  --rotate: 60deg;
+}
+.clock .number3 {
+  --rotate: 90deg;
+}
+.clock .number4 {
+  --rotate: 120deg;
+}
+.clock .number5 {
+  --rotate: 150deg;
+}
+.clock .number6 {
+  --rotate: 180deg;
+}
+.clock .number7 {
+  --rotate: 210deg;
+}
+.clock .number8 {
+  --rotate: 240deg;
+}
+.clock .number9 {
+  --rotate: 270deg;
+}
+.clock .number10 {
+  --rotate: 300deg;
+}
+.clock .number11 {
+  --rotate: 330deg;
+}
